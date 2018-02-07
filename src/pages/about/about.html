@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      تبرع بحاجة 
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-list >   
+            
+       <div class= "container" >
+
+     <ion-item   >               
+       <ion-label  >   اسم الحاجة المتبرع بها: </ion-label>           
+        <ion-input  [(ngModel)]= "firstname" ></ion-input> 
+         </ion-item>        
+            
+            
+           <ion-item >          
+              <ion-label >  اسم المتبرع بالحاجة:</ion-label>
+              <ion-input     type="text"  [(ngModel)]= "lastname"   ></ion-input>              
+            </ion-item>
+
+            <ion-item>
+                <ion-label > عنوان سكن المتبرع :</ion-label>
+                <ion-input  type="text"  [(ngModel)]= "address"     ></ion-input>
+              </ion-item>      
+          
+              
+            <ion-item >
+              <ion-label > رقم الهاتف المتبرع: </ion-label>
+              <ion-input  type="text" [(ngModel)]= "phone" ></ion-input>
+            </ion-item>
+             
+            <ion-item >
+              <ion-label > نبذة مختصرة عن الحاجة المتبرع بها: </ion-label>
+              <ion-textarea   type="text" [(ngModel)]= "infor"  style="height:100px"> </ion-textarea> 
+              </ion-item >
+        
+           <!-- <ion-item>
+              <ion-label >: اكتب نبذة مختصرة</ion-label>
+              <ion-input    text-right   type="text" [(ngModel)]= "infor" ></ion-input>
+            </ion-item>-->      
+        
+            </div>
+      
+      
+        <button ion-button full large class= container (click)="createEmployee(firstname,lastname,address,phone,
+        infor)">
+        <ion-icon name=ios-add-circle large > </ion-icon>
+        اضافة </button>    
+            
+       
+  
+   
+  </ion-list >
+
+</ion-content>

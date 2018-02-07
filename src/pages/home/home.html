@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> حاجات متبرع بها</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+    <ion-list>        
+  
+ 
+        <button ion-item *ngFor="let item of items$   | async json" >
+            
+
+
+        <ion-avatar item-start>          
+          <img src="assets/imags/peson.svg">
+        </ion-avatar>
+
+
+        <ion-note> key = {{item.payload.key}}</ion-note>
+          <h2>اسم الحاجة :{{item.payload.val().firstname}} </h2>
+             <h2> اسم الشخص المتبرع:{{item.payload.val().lastname}}</h2>
+        <h2> عنوان الشخص المتبرع:{{item.payload.val().address}}</h2> 
+                   <h2> رقم الهاتف:   {{item.payload.val().phone}}  </h2>
+            
+                  
+           </button>
+          </ion-list> 
+  
+</ion-content>
